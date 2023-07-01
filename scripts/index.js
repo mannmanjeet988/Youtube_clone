@@ -1,11 +1,7 @@
-// const BASE_URL = "https://www.googleapis.com/youtube/v3";
-// const API_KEY = "AIzaSyDWrVyyEPgQWOJq91g9qi2q8HAWCNGC58k";
-
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 const API_KEY = "AIzaSyDWrVyyEPgQWOJq91g9qi2q8HAWCNGC58k";
 
 const container = document.getElementById("main-container");
-
 
 async function getVideos(q) {
   const url = `${BASE_URL}/search?key=${API_KEY}&q=${q}&type=videos&maxResults=20`;
@@ -27,7 +23,7 @@ async function getVideoData(videos) {
   }
 
   console.log(videoData);
-  renderVideos(videoData.items);
+  renderVideos(videoData);
 }
 
 async function getVideoDetails(videoId) {
@@ -51,20 +47,21 @@ function renderVideos(videos) {
         </div>
         <div class="video-description">
           <div class="channel-avatar">
-            <img src="" alt="channel avatar" />
+            <img src="" alt="${video.snippet.channelTitle}" />
           </div>
           <div class="video-title">${video.snippet.localized.title}</div>
           <div class="channel-description">
             <p class="channel-name">Channel</p>
-            <p class="video-views">15K Views</p>
-            <p class="video-time">1 week ago</p>
+            <div class="inner-info">
+              <p class="video-views">15K Views</p>
+              <p class="video-time">1 week ago</p>
+            </div>
           </div>
         </div>
       </div>
       `;
   }
 }
-
 
 function openVideoDetails(videoId) {
   localStorage.setItem("videoId", videoId);
