@@ -4,15 +4,21 @@ nav {
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    height: 60px;
   }
   
   .left {
     display: flex;
     align-items: center;
+    gap:10px;
+  }
+
+  .left .icon{
+    margin-left: 10px;
   }
   
   .middle {
-    flex: 0.2;
+    flex: 0.7;
     display: flex;
     gap: 5px;
   }
@@ -21,15 +27,33 @@ nav {
     display: flex;
     align-items: stretch;
     width: 100%;
+    
   }
   
   .middle .input input {
     border: none;
     width: 100%;
     font-size: 1rem;
+    background-color: black;
+    padding: 5px;
   }
   
   .middle .input button {
     border: none;
     background-color: #303030;
   }
+
+  .right{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+    
+  }
+
+  .right .profile{
+    margin-right: 10px;
+    border-radius: 50px;
+    color: #303030;
+  }
+

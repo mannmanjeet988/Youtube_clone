@@ -6,16 +6,20 @@
     <title>Youtube Clone</title>
     <link href="styles/index.css" rel="stylesheet" />
     <link href="styles/nav.css" rel="stylesheet"  />
+    <link href="styles/aside.css" rel="stylesheet"  />
+    <link href="./styles/main.css" rel="stylesheet"  />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
     <nav>
       <div class="left">
         <div class="icon">
-          <img src="assets/images/hamburger.png" />
+          <img src="./assets/hamburger.png" />
         </div>
 
         <div class="logo">
-          <img src="assets/images/logo.png" />
+          <img src="./assets/logo.png" />
         </div>
       </div>
 
@@ -23,26 +27,43 @@
         <div class="input">
           <input type="search" placeholder="Search" />
           <button type="button">
-            <img src="/assets/images/hamburger.png" />
+            <img src="./assets/searchIcon.png" />
           </button>
         </div>
         <div class="icon">
-          <img src="/assets/images/micIcon.png" />
+          <img src="./assets/micIcon.png" />
         </div>
       </div>
 
       <div class="right">
-        <div class="icon"></div>
-        <div class="icon"></div>
-        <div class="icon"></div>
-        <div class="icon"></div>
+        <div class="icon">
+          <img src="./assets/create.png" />
+        </div>
+        <div class="icon">
+          <img src="./assets/apps.png" />
+        </div>
+        <div class="icon">
+          <img src="./assets/notifications.png" />
+        </div>
+        <div class="profile">
+          <img src="./assets/Profile-pic.png" />
+        </div>
       </div>
     </nav>
 
-    <aside></aside>
+    <!-- <aside id="aside">
+      <div >
+
+      </div>
+    </aside> -->
 
     <main>
-      <div id="videos-container">Loading...</div>
+      <!-- <div id="aside"></div> -->
+      <div id="main-container">
+        <!-- <div id="videos-container"></div> -->
+
+      </div>
+      
     </main>
 
     <script src="scripts/index.js"></script>

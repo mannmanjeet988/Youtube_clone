@@ -1,12 +1,12 @@
+// const BASE_URL = "https://www.googleapis.com/youtube/v3";
+// const API_KEY = "AIzaSyDWrVyyEPgQWOJq91g9qi2q8HAWCNGC58k";
+
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 const API_KEY = "AIzaSyDWrVyyEPgQWOJq91g9qi2q8HAWCNGC58k";
 
-const container = document.getElementById("videos-container");
+const container = document.getElementById("main-container");
 
-// first we construct the url
-// then we send the request
-// then we convert it to json(format we want)
-// get the data and modify it according to our needs
+
 async function getVideos(q) {
   const url = `${BASE_URL}/search?key=${API_KEY}&q=${q}&type=videos&maxResults=20`;
   const response = await fetch(url, {
@@ -27,7 +27,7 @@ async function getVideoData(videos) {
   }
 
   console.log(videoData);
-  renderVideos(videoData);
+  renderVideos(videoData.items);
 }
 
 async function getVideoDetails(videoId) {
@@ -65,9 +65,10 @@ function renderVideos(videos) {
   }
 }
 
+
 function openVideoDetails(videoId) {
   localStorage.setItem("videoId", videoId);
-  window.open("./videoDetails.html");
+  window.open("/videoDetails.html");
 }
 
 getVideos("");
