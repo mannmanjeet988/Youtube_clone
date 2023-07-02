@@ -1,5 +1,5 @@
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
-const API_KEY = "AIzaSyDWrVyyEPgQWOJq91g9qi2q8HAWCNGC58k";
+const API_KEY = "AIzaSyDizwX2rwNEQwp-xi6r3wgKuLe2K8HrcgU";
 
 const container = document.getElementById("main-container");
 
@@ -69,3 +69,78 @@ function openVideoDetails(videoId) {
 }
 
 getVideos("");
+
+
+// let searchString = "rahul gandhi";
+// const container = document.getElementById("main-container");
+// const apiKey = "AIzaSyDizwX2rwNEQwp-xi6r3wgKuLe2K8HrcgU" ;
+// const endpoint =`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&q=${searchString}&part=snippet&type=video&maxResults=20`;
+
+// async function fetchResults(){
+//     const response = await fetch(endpoint);
+//     const result = await response.json();
+//     renderVideos(result.items);
+// }
+// fetchResults()
+
+// function renderVideos(videosList) {
+//     videosList.forEach(video => {
+//         const videoItem = document.createElement("div");
+//         const {title, description, thumbnails} = video.snippet;
+//         videoItem.innerHTML = `
+//                     <p>${video.snippet.title}</p>
+//                     <img src="${thumbnails.default.url}" width="200px" heigh="100px" />
+//                     <p>${description}</p>
+//                 `;
+
+//         container.appendChild(videoItem);
+//     })
+// }
+
+// Load video details
+// const apiKey = "YOUR_API_KEY" ;
+// const baseUrl = "https://www.googleapis.com/youtube/v3";
+// const videoId = "3ARpsDCgwhM" ; 
+// const endpoint = `${baseUrl}/videos?key=${apiKey}&part=snippet,statistics&id=${videoId}`;
+
+// async function loadVideoDetails(){
+//     const response = await fetch(endpoint);
+//     const result = await response.json();
+//     console.log(result)
+// }
+//loadVideoDetails();
+
+// {
+// "kind": "youtube#searchResult",
+// "etag": "Nt0ucaNZbXFSqUNpJ6fuPibW8gs",
+// "id": {
+// "kind": "youtube#video",
+// "videoId": "pzGNrhWBAS4"
+// },
+// "snippet": {
+// "publishedAt": "2023-06-23T13:29:58Z",
+// "channelId": "UCx8Z14PpntdaxCt2hakbQLQ",
+// "title": "Rahul Gandhi की शादी और दाढ़ी पर Lalu Prasad yadav सरेआम क्या बोले सब हंस पड़े #shorts",
+// "description": "",
+// "thumbnails": {
+//     "default": {
+//         "url": "https://i.ytimg.com/vi/pzGNrhWBAS4/default.jpg",
+//         "width": 120,
+//         "height": 90
+//     },
+//     "medium": {
+//         "url": "https://i.ytimg.com/vi/pzGNrhWBAS4/mqdefault.jpg",
+//         "width": 320,
+//         "height": 180
+//     },
+//     "high": {
+//         "url": "https://i.ytimg.com/vi/pzGNrhWBAS4/hqdefault.jpg",
+//         "width": 480,
+//         "height": 360
+//     }
+// },
+// "channelTitle": "The Lallantop",
+// "liveBroadcastContent": "none",
+// "publishTime": "2023-06-23T13:29:58Z"
+// }
+// } 

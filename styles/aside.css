@@ -4,3 +4,32 @@
     height:100vh;
     color:white;
 } */
+
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 200px;
+    width: 200px;
+    height: calc(100vh - 60px);
+    background:#303030;
+    /* padding-right: 20px; */
+    display:flex;
+    flex-direction: column;
+    color:white;
+}
+
+.links{
+    color:white;
+    padding:10px;
+    text-decoration: none;
+    display:flex;
+    gap:10px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.divider{
+    display:flex;
+    flex-direction: column;
+}
